@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.timetable.ClearTimeTableDialogFragment">
+
+
+    <TextView
+        android:id="@+id/clearTV"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Apakah anda ingin menghapus seluruh kelas?"
+        android:fontFamily="@font/spacegrotesk"
+        android:drawableTop="@drawable/baseline_clear_24"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/YesTV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/yes_clear_btn_bk"
+        android:fontFamily="@font/spacegrotesk"
+        android:gravity="center"
+        android:text="Ya"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clearTV"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+    <TextView
+        android:id="@+id/NoTV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/YesTV"
+        android:text="Tidak"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:fontFamily="@font/spacegrotesk"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/no_clear_btn_bk"
+        android:layout_marginBottom="24dp"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

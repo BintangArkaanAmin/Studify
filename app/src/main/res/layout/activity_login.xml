@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity"
+    android:background="@color/loginBkColor"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/login_shape_bk"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_login_bk"
+            />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/namaAPK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Planner"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintTop_toBottomOf="@id/close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:fontFamily="@font/spacegrotesk"
+        android:textStyle="bold"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/namaAPK"
+        android:layout_margin="32dp"
+        android:background="@drawable/bg_login"
+        >
+
+        <TextView
+            android:id="@+id/Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/TVemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/Login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="16sp"
+            android:textSize="12sp"
+            />
+        <EditText
+            android:id="@+id/ETemaillogin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="12sp"
+            android:backgroundTint="@color/primaryTextColor"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:hint="Email"
+            app:layout_constraintTop_toBottomOf="@id/TVemail"
+            android:layout_margin="16dp"
+            />
+
+        <TextView
+            android:id="@+id/TVpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/ETemaillogin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="16sp"
+            android:textSize="12sp"
+            />
+
+        <EditText
+            android:id="@+id/ETpasslogin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="12sp"
+            android:backgroundTint="@color/primaryTextColor"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:hint="password"
+            app:layout_constraintTop_toBottomOf="@id/TVpass"
+            android:layout_margin="16dp"
+            />
+
+        <TextView
+            android:id="@+id/TVforgotpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ETpasslogin"
+            android:text="Forgot Password?"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="12sp"
+            android:gravity="end"
+            android:onClick="viewForgotPAssword"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/BTNlogin"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/TVforgotpass"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:padding="8dp"
+            android:background="@drawable/btn_login"
+            />
+
+        <TextView
+            android:id="@+id/TVLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/primaryTextColor"
+            android:text="Tidak Punya Akun?, Daftar Disini"
+            app:layout_constraintTop_toBottomOf="@id/BTNlogin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
